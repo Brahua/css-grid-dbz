@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    margin: 50px auto;
+    width: 90%;
+    max-width: 1000px;
+    background-image: url("./images/fondo.jpg");
+    background-size: cover; 
+}
+
+.container {
+    width: 100%;
+    display: grid;
+    margin-top: 20px;
+    gap: 10px;
+    grid-template: repeat(4, 1fr) / repeat(2, 1fr);
+    justify-content: center;
+    background: rgba(0,0,0, .4);
+    padding: 10px;
+}
+
+.personaje {
+    position: relative;
+    /*display: block;*/
+}
+
+.imagen-container {
+    margin: 0;
+}
+
+.img-container img {
+    width: 100%;
+    vertical-align: top;
+}
+
+.container-overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: rgba(0,0,0, .4);
+    color: #fff;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.personaje:hover .container-overlay {
+    display: flex;
+}
+
+
+.container-overlay .text-overlay {
+    font-size: 26px;
+}
+
+@media screen and (max-width: 1024px) {
+
+}
+@media screen and (max-width: 768px) {
+    .container {
+        grid-template: repeat(1, 1fr) / repeat(1, 1fr);
+    }
+}
